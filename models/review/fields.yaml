@@ -1,0 +1,78 @@
+fields:
+    name:
+        label: 'zaxbux.reviews::lang.fields.review.name.label'
+        span: left
+        required: 1
+        type: text
+        comment: 'zaxbux.reviews::lang.fields.review.name.comment'
+    email:
+        label: 'zaxbux.reviews::lang.fields.review.email.label'
+        span: right
+        type: text
+        comment: 'zaxbux.reviews::lang.fields.review.email.comment'
+    country:
+        type: dropdown
+        label: 'zaxbux.reviews::lang.fields.review.country.label'
+        comment: 'zaxbux.reviews::lang.fields.review.country.comment'
+        required: 1
+        span: left
+        placeholder: Select...
+    check_in:
+        label: 'zaxbux.reviews::lang.fields.review.check_in.label'
+        mode: date
+        format: d/m/Y
+        span: right
+        required: 1
+        type: datepicker
+        comment: 'zaxbux.reviews::lang.fields.review.check_in.comment'
+        ignoreTimezone: true
+    rating:
+        label: 'zaxbux.reviews::lang.fields.review.rating.label'
+        span: auto
+        required: 1
+        attributes:
+            min: '0'
+            max: '5'
+        type: number
+        comment: 'zaxbux.reviews::lang.fields.review.rating.comment'
+    title:
+        label: 'zaxbux.reviews::lang.fields.review.title.label'
+        span: full
+        type: text
+        comment: 'zaxbux.reviews::lang.fields.review.title.comment'
+    content:
+        label: 'zaxbux.reviews::lang.fields.review.content.label'
+        size: small
+        span: full
+        required: 1
+        attributes:
+            maxlength: '65535'
+        type: textarea
+        comment: 'zaxbux.reviews::lang.fields.review.content.comment'
+    approved:
+        label: 'zaxbux.reviews::lang.fields.review.approved.label'
+        span: auto
+        required: 0
+        type: switch
+        comment: 'zaxbux.reviews::lang.fields.review.approved.comment'
+    visible:
+        label: 'zaxbux.reviews::lang.fields.review.visible.label'
+        span: auto
+        default: 1
+        type: switch
+        comment: 'zaxbux.reviews::lang.fields.review.visible.comment'
+    featured:
+        label: 'zaxbux.reviews::lang.fields.review.featured.label'
+        span: auto
+        type: switch
+        comment: 'zaxbux.reviews::lang.fields.review.featured.comment'
+tabs:
+    fields:
+        reply_content:
+            label: 'zaxbux.reviews::lang.fields.review.reply_content.label'
+            size: small
+            span: full
+            type: richeditor
+            toolbarButtons: bold,italic,underline,|,insertLink
+            comment: 'zaxbux.reviews::lang.fields.review.reply_content.comment'
+            tab: 'zaxbux.reviews::lang.tabs.response'

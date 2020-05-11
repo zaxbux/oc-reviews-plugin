@@ -1,0 +1,42 @@
+subject = "🔔 New review submitted by {{ review.name }} | {{ appName|raw }} 🔔"
+layout = "system"
+==
+
+
+Someone submitted a new review of your property online! Here are the details:
+
+Name: {{ review.name }}
+Email: {{ review.email }}
+Check-in: {{ review.check_in|date('F j, Y') }}
+Country: {{ review.getCountryName() }}
+Rating: {{ review.rating }}/5
+IP Address: {{ ip }}
+
+
+**********
+{{ review.content }}
+**********
+
+Login to the admin area to moderate and reply to this review: {{ backend }}
+
+==
+<p>Someone submitted a new review of your property online! Here are the details:</p>
+
+<p>
+	Name: <strong>{{ review.name }}</strong><br>
+	Email: <strong>{{ review.email }}</strong><br>
+	Check-in: <strong>{{ review.check_in|date('F j, Y') }}</strong><br>
+	Country: <strong>{{ review.getCountryName() }}</strong><br>
+	Rating: <strong>{{ review.rating }}/5</strong><br>
+	IP Address: <strong>{{ ip }}</strong>
+</p>
+
+{% partial 'panel' body %}
+	{{ review.content }}
+{% endpartial %}
+
+<p>Login to the admin area to moderate and reply to this review.</p>
+
+{% partial 'button' url=backend body %}
+    Sign in to admin area
+{% endpartial %}

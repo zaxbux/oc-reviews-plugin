@@ -1,0 +1,17 @@
+{
+    "name": "zaxbux/oc-reviews-plugin",
+    "description": "Reviews plugin for Skyline House",
+    "type": "octobercms-plugin",
+    "license": "Unlicensed",
+    "authors": [
+        {
+            "name": "Zach Schneider",
+            "email": "hello@zacharyschneider.ca"
+        }
+    ],
+    "require": {
+        "league/iso3166": "^2.1",
+        "google/recaptcha": "^1.2",
+        "spatie/schema-org": "^2.8"
+    }
+}

@@ -1,0 +1,11 @@
+name: 'zaxbux.reviews::lang.controllers.reviews.form_title'
+modelClass: Zaxbux\Reviews\Models\Review
+form: $/zaxbux/reviews/models/review/fields.yaml
+defaultRedirect: zaxbux/reviews/reviews
+create:
+    redirect: 'zaxbux/reviews/reviews/update/:id'
+    redirectClose: zaxbux/reviews/reviews
+update:
+    redirect: zaxbux/reviews/reviews
+    redirectClose: zaxbux/reviews/reviews
+preview: {  }

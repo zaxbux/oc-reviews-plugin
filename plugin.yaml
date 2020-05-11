@@ -1,0 +1,17 @@
+plugin:
+    name: 'zaxbux.reviews::lang.plugin.name'
+    description: 'zaxbux.reviews::lang.plugin.description'
+    author: 'Zachary Schneider'
+    icon: oc-icon-star-half-full
+    homepage: ''
+permissions:
+    manage_reviews:
+        tab: 'zaxbux.reviews::lang.plugin.name'
+        label: 'zaxbux.reviews::lang.permissions.manage_reviews'
+navigation:
+    main-menu-item:
+        label: 'zaxbux.reviews::lang.plugin.name'
+        url: zaxbux/reviews/reviews
+        icon: icon-star-half-o
+        permissions:
+            - manage_reviews

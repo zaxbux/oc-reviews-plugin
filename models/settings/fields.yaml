@@ -1,0 +1,22 @@
+fields:
+    moderatorGroup:
+        type: dropdown
+        label: zaxbux.reviews::lang.settings.fields.moderatorGroup.label
+        comment: zaxbux.reviews::lang.settings.fields.moderatorGroup.comment
+        emptyOption: '[ None ]'
+        span: auto
+    recaptcha[siteKey]:
+        type: text
+        label: zaxbux.reviews::lang.settings.fields.recaptcha_siteKey.label
+        comment: zaxbux.reviews::lang.settings.fields.recaptcha_siteKey.comment
+        commentHtml: true
+        required: true
+        span: left
+    recaptcha[secretKey]:
+        type: text
+        label: zaxbux.reviews::lang.settings.fields.recaptcha_secretKey.label
+        comment: zaxbux.reviews::lang.settings.fields.recaptcha_secretKey.comment
+        commentHtml: true
+        required: true
+        span: right
+    

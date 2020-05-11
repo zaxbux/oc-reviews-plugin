@@ -1,0 +1,40 @@
+columns:
+    name:
+        label: 'zaxbux.reviews::lang.fields.review.name.label'
+        type: text
+        searchable: true
+        sortable: true
+    email:
+        label: 'zaxbux.reviews::lang.fields.review.email.label'
+        type: text
+        searchable: true
+    check_in:
+        label: 'zaxbux.reviews::lang.fields.review.check_in.label'
+        type: date
+        sortable: true
+        ignoreTimezone: true
+    rating:
+        label: 'zaxbux.reviews::lang.fields.review.rating.label'
+        type: number
+        sortable: true
+    approved:
+        label: 'zaxbux.reviews::lang.fields.review.approved.label'
+        type: switch_status
+        sortable: true
+    featured:
+        label: 'zaxbux.reviews::lang.fields.review.featured.label'
+        type: switch_status
+        sortable: true
+    visible:
+        label: 'zaxbux.reviews::lang.fields.review.visible.label'
+        type: switch_status
+        sortable: true
+    _replied:
+        label: 'zaxbux.reviews::lang.fields.review._replied.label'
+        type: switch_status
+        sortable: true
+        valueFrom: reply_content
+    created_at:
+        label: 'zaxbux.reviews::lang.fields.review.created_at.label'
+        type: datetime
+        sortable: true
