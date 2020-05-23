@@ -1,0 +1,11 @@
+import:
+    title: Import reviews
+    modelClass: Zaxbux\Reviews\Models\ReviewImport
+    list: $/zaxbux/reviews/models/reviewimport/columns.yaml
+    redirect: zaxbux/reviews/reviews
+    premissions: [ 'manage_reviews' ]
+    form:
+        fields:
+            date_format:
+                type: text
+                label: Date Format

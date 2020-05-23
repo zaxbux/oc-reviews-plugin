@@ -1,0 +1,23 @@
+columns:
+    name:
+        label: 'zaxbux.reviews::lang.fields.review.name.label'
+    title:
+        label: 'zaxbux.reviews::lang.fields.review.title.label'
+    rating:
+        label: 'zaxbux.reviews::lang.fields.review.rating.label'
+    content:
+        label: 'zaxbux.reviews::lang.fields.review.content.label'
+    email:
+        label: 'zaxbux.reviews::lang.fields.review.email.label'
+    check_in:
+        label: 'zaxbux.reviews::lang.fields.review.check_in.label'
+    rating:
+        label: 'zaxbux.reviews::lang.fields.review.rating.label'
+    country:
+        label: 'zaxbux.reviews::lang.fields.review.country.label'
+    approved:
+        label: 'zaxbux.reviews::lang.fields.review.approved.label'
+    featured:
+        label: 'zaxbux.reviews::lang.fields.review.featured.label'
+    visible:
+        label: 'zaxbux.reviews::lang.fields.review.visible.label'

@@ -7,6 +7,13 @@
         'access_settings' => 'Access Settings',
         'manage_reviews' => 'Manage Reviews',
     ],
+    'form' => [
+        'import' => 'Import',
+    ],
+    'navigation' => [
+        'reviews' => 'Reviews',
+        'reviewsImport' => 'Import Reviews',
+    ],
     'settings' => [
         'label' => 'Reviews',
         'description' => 'Manage settings for reviews.',
