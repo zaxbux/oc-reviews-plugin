@@ -18,27 +18,6 @@ class Plugin extends PluginBase {
 		];
 	}
 
-	public function registerPermissions() {
-        return [
-            'zaxbux.reviews.access_settings' => [
-                'label' => 'zaxbux.reviews::lang.permissions.access_settings',
-                'tab'   => 'zaxbux.reviews::lang.plugin.name',
-                'order' => 200,
-                'roles' => [
-                    // role API codes
-                ]
-			],
-			'zaxbux.reviews.manage_reviews' => [
-                'label' => 'zaxbux.reviews::lang.permissions.manage_reviews',
-                'tab'   => 'zaxbux.reviews::lang.plugin.name',
-                'order' => 200,
-                'roles' => [
-                    // role API codes
-                ]
-            ],
-        ];
-    }
-
 	public function registerSettings() {
         return [
             'settings' => [

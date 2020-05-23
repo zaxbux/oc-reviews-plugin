@@ -5,13 +5,23 @@ plugin:
     icon: oc-icon-star-half-full
     homepage: ''
 permissions:
+    access_settings:
+        label: 'zaxbux.reviews::lang.permissions.access_settings'
+        tab: 'zaxbux.reviews::lang.plugin.name'
     manage_reviews:
         tab: 'zaxbux.reviews::lang.plugin.name'
         label: 'zaxbux.reviews::lang.permissions.manage_reviews'
 navigation:
-    main-menu-item:
-        label: 'zaxbux.reviews::lang.plugin.name'
-        url: zaxbux/reviews/reviews
-        icon: icon-star-half-o
-        permissions:
-            - manage_reviews
+     main-menu:
+         label: 'zaxbux.reviews::lang.plugin.name'
+         url: zaxbux/reviews/reviews
+         icon: icon-star-half-o
+         permissions:
+             - manage_reviews
+#         sideMenu:
+#             reviews:
+#                 label: 'zaxbux.reviews::lang.plugin.name'
+#                 url: zaxbux/reviews/reviews
+#                 icon: icon-star-half-o
+#                 permissions:
+#                     - manage_reviews
