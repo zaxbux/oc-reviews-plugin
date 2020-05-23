@@ -57,7 +57,9 @@ class Reviews extends ComponentBase {
 
 		$this->reviews = $this->page['reviews'] = $this->loadReviews();
 
-		$this->schemaOrg = $this->page['reviewSchemaOrg'] = $this->reviews->pluck('schemaOrg');
+		$this->schemaOrg = $this->page['reviewSchemaOrg'] = $this->reviews->map(function ($model) {
+			return $model->getSchemaOrg();
+		});
 
 		/*
          * If the page number is not valid, redirect
@@ -80,9 +82,17 @@ class Reviews extends ComponentBase {
 		$perPage = $this->property('reviewsPerPage');
 
 		if ($this->property('showFeatured')) {
-			return Review::isFeatured()->orderBy('created_at', 'desc')->paginate($perPage, $page);
+			if ($perPage > 0) {
+				return Review::isFeatured()->orderBy('created_at', 'desc')->paginate($perPage, $page);
+			}
+
+			return Review::isFeatured()->orderBy('created_at', 'desc')->get();
 		}
 
-		return Review::isPublished()->orderBy('created_at', 'desc')->paginate($perPage, $page);
+		if ($perPage > 0) {
+			return Review::isPublished()->orderBy('created_at', 'desc')->paginate($perPage, $page);
+		}
+
+		return Review::isPublished()->orderBy('created_at', 'desc')->get();
 	}
 }

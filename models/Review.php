@@ -17,8 +17,11 @@ class Review extends Model {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['deleted_at'];
+    protected $guarded = [
+        'id'
+    ];
 
+    protected $dates = ['deleted_at'];
 
     /**
      * @var string The database table used by the model.
@@ -110,8 +113,8 @@ class Review extends Model {
         Mail::sendTo($group->users, 'zaxbux.reviews::mail.new-review', $vars);
     }
 
-    public function afterFetch() {
-        $this->schemaOrg = Schema::review()
+    public function getSchemaOrg() {
+        return Schema::review()
             ->name($this->title)
             ->author(Schema::person()->name($this->getPublicName()))
             ->datePublished($this->created_at)

@@ -31,9 +31,9 @@ class ReviewSummary extends ComponentBase {
 		$this->reviewCount   = $this->page['reviewCount']   = Review::isPublished()->get()->count();
 		$this->overallRating = $this->page['overallRating'] = Review::isPublished()->avg('rating');
 		$this->schemaOrg     = Schema::aggregateRating()
-			->bestValue(5)
+			->bestRating(5)
 			->ratingValue(round($this->overallRating, 2))
-			->worstValue(1)
+			->worstRating(1)
 			->ratingCount($this->reviewCount);
 	}
 }
