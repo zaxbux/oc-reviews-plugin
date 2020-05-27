@@ -12,13 +12,13 @@ class BuilderTableCreateZaxbuxReviewsReviews extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('country', 2);
             $table->timestamp('check_in');
             $table->integer('rating')->unsigned();
             $table->string('title');
             $table->text('content');
-            $table->text('reply_content');
+            $table->text('reply_content')->nullable();
             $table->boolean('featured')->default(false);
             $table->boolean('approved')->default(false);
             $table->boolean('visible')->default(true);
